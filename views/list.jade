@@ -29,7 +29,7 @@ block body
                                 button(type='button', onclick="window.location.href='/api/#{user.id}/edit'") Edit
                                 form(method='POST', action='/api/#{user._id}?_method=DELETE') 
                                     button(type='submit') Delete
-            button(type='button', onclick="window.location.href='/create'") Add a Dog
+            button(type='button', onclick="window.location.href='/api/new'") Add a Dog
                                 
   include script.jade
   include footer.jade

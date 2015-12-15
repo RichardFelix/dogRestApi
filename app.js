@@ -12,7 +12,7 @@ app.get('/', function(req,res){
     res.redirect('/api');
 });
 
-app.get('/create', function(req, res){
+app.get('/api/new', function(req, res){
     res.render('create');
 });
 
