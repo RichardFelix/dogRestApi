@@ -13,7 +13,6 @@
     "express": "^4.13.3",
     "jade": "^1.11.0",
     "method-override": "^2.3.5",
-    "mongoose": "^4.2.8",
-    "passport": "^0.3.2"
+    "mongoose": "^4.2.8"
   }
 }
