@@ -20,7 +20,8 @@ app.get('/api/new', function(req, res){
 app.post('/api', dogApi.newDog );
 app.put('/api/:id', dogApi.put );
 app.delete('/api/:id', dogApi.deleteDog );
-app.get('/api', dogApi.find );
+app.get('/api', dogApi.findAll );
+app.get('/api/:id', dogApi.findOne );
 app.get('/api/:id/edit', dogApi.edit );
 
 app.get('*', function(req, res){

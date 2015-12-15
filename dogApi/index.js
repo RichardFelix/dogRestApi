@@ -12,26 +12,22 @@ var dogsSchema = mongoose.Schema({
 
 var Dog = mongoose.model('Dog', dogsSchema);
 
-var find = function(req, res){               
-    if(Object.keys(req.query).length === 0 ){
+var findAll = function(req, res){               
         Dog.find( {}, function(err,users){ 
                 if(err)
                     throw err;
                 else
                     res.render('index', { users: users } );
             });
-    }else if(Object.keys(req.query).length === 1 ) {
-        Dog.find(
-            { _id: req.query.id }
-        )
-        .exec(function(err, user){
-            if(err)
-                res.send('No Id Found in DB'); 
-            else
-                res.send(user);
-        });       
-        
-    }
+};
+
+var findOne = function(req, res){               
+        Dog.findById( req.params.id, function(err,user){ 
+                if(err)
+                    throw err;
+                else
+                    res.render('showOne', { user: user } );
+            });
 };
 
 var newDog =  function(req,res){    
@@ -88,7 +84,8 @@ module.exports ={
     mongoose, 
     bodyParser, 
     methodOverride,
-    find,
+    findAll,
+    findOne,
     newDog,
     edit,
     put,
