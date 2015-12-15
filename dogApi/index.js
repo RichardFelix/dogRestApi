@@ -18,7 +18,7 @@ var find = function(req, res){
                 if(err)
                     throw err;
                 else
-                    res.render('list', { users: users } );
+                    res.render('index', { users: users } );
             });
     }else if(Object.keys(req.query).length === 1 ) {
         Dog.find(

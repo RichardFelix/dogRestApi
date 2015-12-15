@@ -5,13 +5,31 @@ block vars
 
 block body
     center
-        h1 Welcome to a Node.js RestAPI Dog Kennel
-        p This is where our are awesome dogs are held. 
-        p Feel free to create, read, update and delete our dogs.
-        button(type='button', onclick="window.location.href='/api'") View Dogs
-        button(type='button', onclick="window.location.href='/create'") Create a Dog
-        button(type='button', onclick="window.location.href='/api'") Edit a Dog
-        button(type='button', onclick="window.location.href='/api'") Delete a Dog
-  
+            h1 Welcome to a Node.js RestAPI Dog Kennel
+            | This is where our are awesome dogs are held. 
+            br
+            | Feel free to create, update and delete our dogs.
+            table(border='1')
+              thead
+                tr
+                    th Name
+                    th Breed
+                    th Age
+                    th 
+                tbody 
+                    - var num = 0
+                    each user in users
+                        - num++
+                        tr(class=(num % 2 == 0) ? 'odd' : 'even') 
+          
+                            td #{user.name}
+                            td #{user.breed}
+                            td #{user.age}
+                            td
+                                button(type='button', onclick="window.location.href='/api/#{user.id}/edit'") Edit
+                                form(method='POST', action='/api/#{user._id}?_method=DELETE') 
+                                    button(type='submit') Delete
+            button(type='button', onclick="window.location.href='/api/new'") Add a Dog
+                                
   include script.jade
   include footer.jade
