@@ -1,0 +1,21 @@
+table{
+    margin: 15px;
+    background-color: #ebaf4e;
+}
+table, td, th{
+    border: 1px solid #171717;
+    border-collapse: collapse;
+    text-align: center;
+}
+th{
+    width: 150px;
+}
+body{
+    background-color: #ccc4c4;
+}
+.odd{
+    background-color: #f8d8a3;
+}
+.even{
+    background-color: #7990b4;
+}

@@ -7,6 +7,7 @@ app.set('view engine', 'jade');
 
 app.use(dogApi.bodyParser.urlencoded({ extended: false }));
 app.use(dogApi.methodOverride("_method"));
+app.use(express.static(__dirname + '/'));
 
 app.get('/', function(req,res){
     res.redirect('/api');
