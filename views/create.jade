@@ -1,0 +1,27 @@
+extends base
+
+block vars
+  - var title = 'Node.js RestAPI'
+
+block body
+    center
+        h1 New Dog
+        form(method='POST', action='/api') 
+            input(type='text' name='name' placeholder='name')
+            br
+            input(type='text' name='breed' placeholder='breed')
+            br
+            input(type='text' name='age' placeholder='age')
+            br
+            br
+            button(type='submit') Create
+        
+  include script.jade
+  include footer.jade
+  
+//          br
+//        br
+//        textarea(columns=50 rows=20)
+//        button(type='button') Read
+//        button(type='button') Update
+//        button(type='button') Delete
