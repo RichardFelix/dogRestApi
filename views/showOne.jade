@@ -9,10 +9,12 @@ block body
             table(border='1')
               thead
                 tr
+                    th id
                     th Breed
                     th Age
                 tbody 
-                        tr
+                        tr(class='even')
+                            td #{user._id}
                             td #{user.breed}
                             td #{user.age}
             button(type='button', onclick="window.location.href='/api/'") Show All Dogs
