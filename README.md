@@ -1,8 +1,10 @@
 #  Node.js RestAPI Dog Kennel
+ A rest API where you can create, read, update and delete ( CRUD ) dogs from the mongoDB database.
 
 # Tools and Technology used
   * Node.js  
-  * Express  
+  * Express 
+  * MongoDB
   * Jade  
   * CSS  
 
